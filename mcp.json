@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "Raisely": {
+      "url": "https://mcp.raisely.com/mcp",
+      "headers": {}
+    }
+  }
+}

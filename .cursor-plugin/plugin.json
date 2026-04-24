@@ -1,0 +1,20 @@
+{
+  "name": "raisely",
+  "version": "0.1.0",
+  "description": "Connect Cursor to Raisely. Ships the Raisely MCP server so you can query and manage campaigns, donations, supporters, and more from chat.",
+  "author": {
+    "name": "Raisely",
+    "email": "support@raisely.com"
+  },
+  "homepage": "https://raisely.com",
+  "repository": "https://github.com/raisely/cursor-plugin",
+  "license": "MIT",
+  "keywords": [
+    "raisely",
+    "fundraising",
+    "nonprofit",
+    "mcp",
+    "campaigns"
+  ],
+  "logo": "assets/logo.png"
+}
