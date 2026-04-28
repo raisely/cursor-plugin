@@ -1,0 +1,20 @@
+{
+  "name": "raisely",
+  "displayName": "Raisely",
+  "owner": {
+    "name": "Raisely",
+    "email": "engineering@raisely.com"
+  },
+  "metadata": {
+    "description": "A focused Team Marketplace",
+    "version": "0.1.0",
+    "pluginRoot": "."
+  },
+  "plugins": [
+    {
+      "name": "raisely",
+      "source": ".",
+      "description": ""
+    }
+  ]
+}
