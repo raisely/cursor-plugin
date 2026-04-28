@@ -5,16 +5,11 @@
     "name": "Raisely",
     "email": "engineering@raisely.com"
   },
-  "metadata": {
-    "description": "A focused Team Marketplace",
-    "version": "0.1.0",
-    "pluginRoot": "."
-  },
   "plugins": [
     {
-      "name": "Raisely",
+      "name": "raisely",
       "source": ".",
-      "description": ""
+      "description": "Cursor plugin for Raisely"
     }
   ]
 }
