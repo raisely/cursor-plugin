@@ -15,7 +15,7 @@ description: Start a local environment of your Raisely Campaign to preview chang
 
 ## Steps
 
-1. Verify `raisely` is available by running the skill `/ensure-raisely-cli`
+1. Verify `raisely` is available using the `raisely-ensure-cli` skill
 2. Verify if port 8015 is free. If not, keep incrementing the port by one (8016, 8017, 8018, 8019...) until you find one available. Do not stop existing process unless the user ask for it
 3. Use `raisely list --json` to find the uuid of the desired campaign. If there is no .raisely.json or the uuid doesn't exist there, then run `raisely init --uuid` with the desired campaign's UUID
 4. Run `raisely local` as a background task. Make sure to pass the right parameters based on the current task
