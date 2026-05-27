@@ -9,7 +9,7 @@ Follow these steps whenever the user wants to work on a Raisely campaign locally
 
 ## Steps
 
-1. **Pick a campaign.** If the user didn't name one, run `raisely list --json` and ask them to pick from the results. Don't guess.
+1. **Pick a campaign.** The campaign must be confirmed by the user in the current session. If `.raisely.json` exists, you may propose its UUID, but show the campaign (name and UUID, resolved via `raisely list --json`) and get explicit confirmation before using it. Otherwise, run `raisely list --json` and ask the user to pick. Don't guess and don't infer from prior chats or recent files.
 2. **Download the campaign.** If `.raisely.json` is missing or points to a different UUID, run `raisely init --uuid <uuid>` to pull it down.
 3. **Start the local preview.** Use the `raisely-start-local` skill to run `raisely local` as a background task.
 4. **Apply requested changes.** When the user asks for changes, edit the campaign files, then take a screenshot from the local preview to confirm the result before reporting back. Make sure to scroll to have the changes in the browser viewport
