@@ -57,3 +57,5 @@ This applies to single-file edits, bulk JSON changes, CLI deploys, and API mutat
 ## When in doubt
 
 Stop and ask. A blocked action with a clear question is always better than an irreversible mistake on a live campaign.
+
+When you need a decision from the user, use the `AskQuestion` tool to present structured choices rather than asking an open-ended question. Always propose concrete options so the user can pick a path forward instead of composing a response from scratch. Include an "Other" option when the list might not cover every case. This applies any time you need to disambiguate intent, confirm a choice between alternatives, or ask the user to select an action.
