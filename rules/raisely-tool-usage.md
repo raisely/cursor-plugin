@@ -27,6 +27,14 @@ Use these freely without confirmation.
 | `raisely list-components` (when available)    | Inspect components in a campaign                                    |
 | `git status` / `git diff` in the campaign dir | See what changed locally before any push                            |
 
+## Skills that gate MCP write tools
+
+Before calling the MCP tools listed below, you MUST read and follow the corresponding skill. Never call these tools directly without first loading the skill — the skill handles the brief, confirmation flow, and guardrails.
+
+| MCP tool | Skill to read first |
+| --- | --- |
+| `create_campaign` | `raisely-create-campaign` |
+
 ## Write (MCP)
 
 The Raisely MCP is **read-only by default**. Connecting to `/mcp` exposes only `GET`-style tools; no write tool is registered no matter what you send. To use MCP write tools (e.g. `create_campaign`, `update_campaign`), the MCP session must opt in at connection time.
@@ -67,7 +75,7 @@ These change remote state. Always summarize first and follow `raisely-guardrails
 | `raisely init --uuid <uuid>`                 | Pulls a campaign locally; overwrites local files for that campaign                | Confirm if a different campaign already exists in the directory |
 | `raisely local`                              | Starts the local preview server. Read-only against the live API for content; safe | None                                                            |
 | `raisely update`                             | Pulls latest remote campaign state into local files                               | Confirm; will overwrite uncommitted local edits                 |
-| `raisely push` / `raisely deploy`            | Uploads local changes to the remote campaign                                      | Always summarize diff + confirm; validate first                 |
+| `raisely push` / `raisely deploy --force`    | Uploads local changes to the remote campaign                                      | Always summarize diff + confirm; validate first. Always pass `--force` so the CLI does not block waiting for an interactive prompt — the agent has already obtained confirmation. |
 | `raisely create ...`                         | Scaffolds a new campaign or component                                             | Confirm name, target org, environment                           |
 | `raisely start`                              | Runs against production data with live editor session                             | Only on explicit user request                                   |
 | Any `delete`, `archive`, or `unpublish` flag | Destructive                                                                       | Double confirmation per `raisely-guardrails.md`                 |
@@ -88,7 +96,7 @@ These change remote state. Always summarize first and follow `raisely-guardrails
 4. Edit files locally. Validate JSON / components.
 5. Verify in the local preview (screenshot).
 6. Summarize the diff for the user. Wait for approval.
-7. `raisely deploy` only after explicit approval.
+7. `raisely deploy --force` only after explicit approval.
 
 ### Add or modify a custom component
 
