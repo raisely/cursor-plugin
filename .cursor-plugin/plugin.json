@@ -1,6 +1,6 @@
 {
   "name": "raisely",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Connect Cursor to Raisely. Ships the Raisely MCP server so you can query and manage campaigns, donations, supporters, and more from chat.",
   "author": {
     "name": "Raisely"
